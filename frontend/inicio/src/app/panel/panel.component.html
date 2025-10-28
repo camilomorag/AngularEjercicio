@@ -1,17 +1,18 @@
+<div class="card">
+  <h1>{{ titulo }}</h1>
+  <h2>{{ subtitulo }}</h2>
 
+  <img *ngIf="mostrarImagen" [src]="imagenUrl" alt="Imagen Angular" width="200">
 
-<div class=" card">
-    <h1>{{ titulo }}</h1>
-    <h2>{{ subtitulo }}</h2>
+  <p>{{ parrafo }}</p>
 
+  <!-- 👇 aquí mostramos las variables faltantes -->
+  <p><strong>Nombre:</strong> {{ nombre }}</p>
+  <p><strong>Edad:</strong> {{ edad }}</p>
+  <p><strong>Total:</strong> {{ total }}</p>
 
-<img *ngIF="mostrarImagen" [src]="imagenUrl" alt="Imagen Angular" width="200">1
-
-<p>{{ parrafo }}</p>
-
-
-<button (click) = "cambiarTexto()">Cambiar texto</button>
-<button (click) ="alternarImagen()">
-    {{ mostrarImagen ? 'Ocultar Imagen': 'Mostrar imagen'}}
-</button>
+  <button (click)="cambiarTexto()">Cambiar texto</button>
+  <button (click)="alternarImagen()">
+    {{ mostrarImagen ? 'Ocultar Imagen' : 'Mostrar imagen' }}
+  </button>
 </div>
