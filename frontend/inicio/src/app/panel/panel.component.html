@@ -1,0 +1,17 @@
+
+
+<div class=" card">
+    <h1>{{ titulo }}</h1>
+    <h2>{{ subtitulo }}</h2>
+
+
+<img *ngIF="mostrarImagen" [src]="imagenUrl" alt="Imagen Angular" width="200">1
+
+<p>{{ parrafo }}</p>
+
+
+<button (click) = "cambiarTexto()">Cambiar texto</button>
+<button (click) ="alternarImagen()">
+    {{ mostrarImagen ? 'Ocultar Imagen': 'Mostrar imagen'}}
+</button>
+</div>
